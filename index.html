@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RocketPaddle!</title>
+	<style type="text/css">
+		html,body {
+			font-family: 			helvetica, arial, sans-serif;
+			margin:					0;
+			padding: 				0;
+			font-size: 				12pt;
+			
+			background-color: 		#333;
+			color: 					#fff;
+		}
+		
+		canvas {
+			position: 				absolute;
+			left: 					0;
+			right: 					0;
+			top: 					0;
+			bottom: 				0;
+			margin: 				auto;
+			cursor: 				none;
+			tabindex:				1;
+		}
+
+		#controls {
+			width: 					250px; 
+			float: 					right; 
+			margin-top: 			50px;
+			margin-right: 			30px;
+
+			font-family: 			"Trebuchet MS";
+			font-size: 				15px;
+			text-align:  			center;
+			color: 					#555555;
+		}
+			#controls span {
+				color: 				#777777;
+			}
+			#controls a {
+				color: 				#999999;
+				text-decoration:  	none;
+			}
+			#controls a:hover {
+				color: 				#777777;
+			}
+	</style>
+	<script type="text/javascript">
+		// clay.io api
+		var Clay = Clay || {};
+		Clay.gameKey = "rocketpaddle";
+		Clay.readyFunctions = [];
+		Clay.ready = function( fn ) {
+		    Clay.readyFunctions.push( fn );
+		};
+		( function() {
+		    var clay = document.createElement("script");
+		    clay.src = ( "https:" == document.location.protocol ? "https://" : "http://" ) + "clay.io/api/api-stats-leaderboard-achievement.js"; 
+		    var tag = document.getElementsByTagName("script")[0]; tag.parentNode.insertBefore(clay, tag);
+		} )();
+	</script>
+	<script type="text/javascript" src="lib/plugins/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="lib/impact/impact.js"></script>
+	<script type="text/javascript" src="lib/game/main.js"></script>
+	<!-- <script type="text/javascript" src="game.min.js"></script> -->
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<div id="controls">
+		Welcome to <span>RocketPaddle!</span><br/><br/>
+		Use the <span>mouse</span> to move the paddle.
+		Press and hold the <span>Left Mouse Button</span> to use the rockets.<br/><br/>
+		While in the game's menu, press<br/>
+		<span>L</span> to see the leaderboards, or<br/>
+		<span>A</span> to see the achievement list.<br/><br/>
+		Every block destroyed with the ball gives you <span>5 points</span>, whereas every block destroyed with the paddle gives you <span>10 points</span>.<br/><br/>
+		If you want to get high scores, you have to use the paddle as much as possible - but be careful not to let the ball fall in.<br/><br/>
+		If you have any questions/suggestions, feel free to ask me on <a href="https://twitter.com/Spierek">Twitter (@Spierek)</a>.<br/><br/>
+		Be sure to also visit <a href="http://spierek.net">my portfolio</a>!
+	</div>
+</body>
+</html>
